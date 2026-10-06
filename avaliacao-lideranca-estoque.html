@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AVALIAÇÃO DO COORDENADOR | RODRIGO SILVA PEREIRA</title>
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#17243a;background:#f3f6fb;line-height:1.5}
+    *{box-sizing:border-box}body{margin:0}main{max-width:920px;margin:34px auto 72px;padding:0 18px}
+    .hero{background:#102844;color:#fff;border-radius:18px;padding:32px 34px;box-shadow:0 9px 26px #1028441a}
+    .hero h1{margin:0 0 8px;font-size:clamp(1.55rem,4vw,2.1rem);line-height:1.2}.hero p{margin:0;color:#d6e5f6;font-size:1.2rem;font-weight:650}
+    .pill{display:inline-block;background:#244668;color:#e7f4ff;font-weight:700;font-size:.78rem;letter-spacing:.035em;padding:5px 11px;border-radius:99px;margin-bottom:15px}
+    .intro,.section{background:#fff;border:1px solid #e2e8f0;border-radius:16px;margin-top:18px;padding:24px 27px;box-shadow:0 4px 16px #10284408}
+    .intro p{margin:.4em 0}.muted{color:#536378;font-size:.92rem}.scale{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.scale span{background:#f0f5fa;border-radius:7px;padding:7px 11px;font-size:.8rem}
+    .progress{height:9px;border-radius:30px;background:#e5edf6;overflow:hidden;margin:8px 0}.progress div{height:100%;background:#1776bb;width:0;transition:width .15s}
+    h2{font-size:1.25rem;margin:0 0 17px;color:#102844}.question{padding:19px 0;border-top:1px solid #e7edf4}.question:first-of-type{border-top:0;padding-top:4px}
+    .q-title{font-weight:650;margin:0 0 13px}.num{color:#23669e;margin-right:6px}fieldset{padding:0;border:0;margin:0;min-width:0}
+    .rating{display:flex;flex-wrap:wrap;gap:8px}.rating label{cursor:pointer;display:inline-flex;align-items:center;gap:5px;border:1px solid #cfdbe9;border-radius:9px;padding:8px 12px;background:#fff;font-weight:600;color:#33465c;min-height:43px}
+    .rating label:has(input:checked){border-color:#1776bb;background:#e9f4fe;color:#105889}.rating input{accent-color:#1776bb}
+    textarea{width:100%;min-height:105px;border:1px solid #bfcede;border-radius:10px;padding:12px;font:inherit;resize:vertical;background:#fff;color:#17243a}
+    textarea:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8fcdf7;outline-offset:2px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin:23px 0 10px}button{font:inherit;cursor:pointer;border-radius:10px;padding:12px 17px;font-weight:700}
+    .primary{color:white;background:#145e9a;border:1px solid #145e9a}.secondary{background:white;border:1px solid #aebfd0;color:#173b5d}.danger{background:#fff;border:1px solid #d7aeb0;color:#913c42}button:disabled{opacity:.65;cursor:wait}
+    .note{background:#fff7e9;border:1px solid #f1ddb4;padding:13px 16px;border-radius:10px;color:#684915;margin-top:16px;font-size:.91rem}
+    footer{text-align:center;color:#64748b;font-size:.83rem;padding-top:17px}
+    .error{color:#ae2532;font-weight:650;margin-top:8px}.invalid{border-left:4px solid #d6424f;padding-left:13px}.invalid textarea{border-color:#d6424f}
+    #thanks{text-align:center;padding:65px 30px}#thanks h2{font-size:clamp(1.6rem,4vw,2.25rem)}#thanks p{font-size:1.08rem;color:#536378}
+    [hidden]{display:none!important}
+    @media(max-width:540px){main{margin-top:12px;padding:0 10px}.hero{padding:25px 20px}.intro,.section{padding:20px 16px}.rating label{padding:8px 10px}.actions button{width:100%}}
+    @media print{body{background:#fff}main{margin:0;max-width:100%;padding:0}.hero{background:#fff;color:#111;border:0;box-shadow:none;padding:10px 0}.hero p{color:#555}.pill,.actions,.progress,.progress-label,.note,.print-hide{display:none!important}.intro,.section{box-shadow:none;break-inside:avoid;border:1px solid #ddd;padding:12px;margin:9px 0}.question{break-inside:avoid;padding:10px 0}textarea{min-height:72px}footer{display:none}}
+  </style>
+</head>
+<body>
+<main>
+  <header class="hero"><h1>AVALIAÇÃO DO COORDENADOR</h1><p>RODRIGO SILVA PEREIRA</p></header>
+  <section class="intro" aria-label="Instruções">
+    <h2>Orientações de preenchimento</h2>
+    <p>Avalie os comportamentos observados na rotina profissional, com sinceridade, respeito e objetividade. Nas respostas abertas, prefira exemplos concretos e evite identificar colegas.</p>
+    <p class="muted">Você não precisa informar seu nome. Suas respostas são enviadas sem nome e sem qualquer identificação. Todas as perguntas são obrigatórias, inclusive as abertas.</p>
+    <div class="scale"><span><b>1</b> Discordo totalmente</span><span><b>2</b> Discordo parcialmente</span><span><b>3</b> Neutro</span><span><b>4</b> Concordo parcialmente</span><span><b>5</b> Concordo totalmente</span><span><b>N/A</b> Não tenho elementos para avaliar</span></div>
+    <p class="progress-label muted" id="progress-label" role="status" aria-live="polite">0 questões objetivas respondidas</p><div class="progress" aria-hidden="true"><div id="progress-fill"></div></div>
+  </section>
+  <form id="survey" novalidate></form>
+  <section class="section" id="finalize">
+    <h2>Finalizar avaliação</h2>
+    <p>Confira suas respostas. Para concluir, todas as questões devem estar preenchidas.</p>
+    <div class="actions"><button class="primary" id="finish" type="button">Concluir avaliação</button></div>
+    <p id="status" class="error" role="alert" aria-live="assertive"></p>
+  </section>
+  <section class="section" id="thanks" hidden tabindex="-1" aria-live="polite">
+    <h2>Obrigado por responder à avaliação!</h2>
+    <p>Sua participação é importante para o desenvolvimento da liderança e a melhoria do ambiente de trabalho.</p>
+  </section>
+  <footer>Avaliação de Liderança • Uso interno</footer>
+</main>
+<script>
+'use strict';
+// ===== Envio das respostas (Supabase) =====
+const SB_URL='https://llfiwklxinautxoujpre.supabase.co';
+const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsZml3a2x4aW5hdXR4b3VqcHJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MDUzNTAsImV4cCI6MjEwNDQ4MTM1MH0.3dLtdv0Hvf93jXQHy2mjOTr4BJoCMHF_MzwUVEI5o38';   // chave pública (anon): a tabela só aceita ENVIO, ninguém lê as respostas por aqui
+const TABELA='avaliacao_lideranca';
+const AVALIADO='RODRIGO SILVA PEREIRA';
+const VERSAO='1';                 // se as perguntas mudarem, troque: assim dá pra saber de qual versão é cada resposta
+const ENVIO_TIMEOUT_MS=20000;
+function novoId(){
+  try{
+    if(window.crypto&&crypto.randomUUID) return crypto.randomUUID();
+    const b=new Uint8Array(16);crypto.getRandomValues(b);b[6]=(b[6]&0x0f)|0x40;b[8]=(b[8]&0x3f)|0x80;
+    const h=[...b].map(x=>x.toString(16).padStart(2,'0')).join('');
+    return `${h.slice(0,8)}-${h.slice(8,12)}-${h.slice(12,16)}-${h.slice(16,20)}-${h.slice(20)}`;
+  }catch(e){return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0;return(c==='x'?r:(r&3|8)).toString(16)})}
+}
+// um id por resposta: se o envio demorar e a pessoa tentar de novo, o banco reconhece que é o mesmo e não duplica
+const respostaId=novoId();
+let enviando=false;
+const sections = [
+ {title:'1. Comunicação e clareza',items:[
+ 'O coordenador transmite as orientações de forma clara e objetiva.',
+ 'As prioridades e os prazos das atividades são comunicados com antecedência adequada.',
+ 'O coordenador escuta opiniões, dúvidas e sugestões antes de tomar decisões.',
+ 'As mudanças nos procedimentos são explicadas de forma compreensível.']},
+ {title:'2. Organização e gestão operacional',items:[
+ 'O coordenador distribui as tarefas de maneira equilibrada, considerando a demanda e a capacidade da equipe.',
+ 'Age com rapidez e eficiência diante de imprevistos operacionais.',
+ 'Acompanha a execução das atividades sem gerar cobranças excessivas ou desnecessárias.']},
+ {title:'3. Respeito, ética e imparcialidade',items:[
+ 'Trata os integrantes da equipe com respeito, independentemente de cargo, experiência ou afinidade pessoal.',
+ 'Aplica regras e cobranças de maneira justa e consistente.',
+ 'Reconhece os próprios erros e assume responsabilidade por suas decisões.',
+ 'Lida com divergências e conflitos de forma profissional, sem constranger colaboradores.',
+ 'Mantém uma postura ética e respeitosa mesmo em situações de pressão.']},
+ {title:'4. Desenvolvimento e valorização',items:[
+ 'Oferece orientações e feedbacks que ajudam a melhorar meu desempenho.',
+ 'Reconhece resultados positivos, dedicação e iniciativas da equipe.',
+ 'Demonstra disposição para ensinar e esclarecer dúvidas operacionais.',
+ 'Incentiva a autonomia e a participação dos colaboradores na melhoria dos processos.']},
+ {title:'5. Tomada de decisão e responsabilidade',items:[
+ 'Toma decisões coerentes com as necessidades e prioridades do setor.',
+ 'Demonstra domínio técnico dos processos e procedimentos sob sua responsabilidade.',
+ 'Sabe diferenciar situações que exigem urgência das que podem ser planejadas.',
+ 'Oferece suporte à equipe quando surgem dificuldades ou problemas.',
+ 'Mantém equilíbrio emocional diante de pressão, falhas e cobranças.']},
+ {title:'6. Confiança e ambiente de trabalho',items:[
+ 'Sinto segurança para comunicar erros ou problemas sem receio de tratamento desrespeitoso.',
+ 'Posso apresentar opiniões contrárias às do coordenador sem sofrer represálias.',
+ 'O coordenador demonstra preocupação com as condições de trabalho e a segurança da equipe.',
+ 'Sua atuação contribui para um ambiente de cooperação e confiança.']}
+];
+const openQuestions = [
+ 'Qual é o maior ponto forte do coordenador? Cite uma situação concreta em que isso ficou evidente.',
+ 'Qual comportamento ou atitude do coordenador mais precisa melhorar? Explique como isso afeta seu trabalho.',
+ 'Descreva uma situação em que você se sentiu bem orientado, apoiado ou valorizado pelo coordenador.',
+ 'Descreva uma situação em que a liderança poderia ter agido melhor. O que deveria ter sido feito de maneira diferente?',
+ 'O que o coordenador poderia mudar na organização das tarefas, nos processos do setor ou na comunicação para melhorar os resultados?',
+ 'Se pudesse sugerir uma única mudança imediata na forma de liderança, qual seria e por quê?'
+];
+const overallQuestions=[
+ {id:'overall',title:'Considerando todos os aspectos, qual é sua avaliação geral da liderança do coordenador?',choices:['Excelente','Boa','Regular','Insatisfatória','Muito insatisfatória']},
+ {id:'prepared',title:'Você considera que o coordenador está preparado para exercer sua função?',choices:['Sim, plenamente','Sim, mas precisa desenvolver alguns aspectos','Parcialmente, existem lacunas importantes','Não, precisa de desenvolvimento significativo','Não tenho elementos suficientes para avaliar']}
+];
+const form=document.getElementById('survey');
+function el(tag,className,text){const x=document.createElement(tag);if(className)x.className=className;if(text!==undefined)x.textContent=text;return x}
+function createRating(id,number,question,choices){const wrap=el('div','question');const field=el('fieldset');const legend=el('legend','q-title');const numberEl=el('span','num',number+' ');legend.append(numberEl,document.createTextNode(question));field.append(legend);const rating=el('div','rating');for(const value of choices){const label=el('label');const input=el('input');input.type='radio';input.name=id;input.value=value;label.append(input,document.createTextNode(value));rating.append(label)}field.append(rating);wrap.append(field);return wrap}
+sections.forEach((section,s)=>{const panel=el('section','section');panel.append(el('h2','',section.title));section.items.forEach((q,i)=>panel.append(createRating(`rating-${s}-${i}`,`${s+1}.${i+1}`,q,['1','2','3','4','5','N/A'])));form.append(panel)});
+const openPanel=el('section','section');openPanel.append(el('h2','','7. Avaliação com respostas abertas'));openPanel.append(el('p','muted','Sempre que possível, cite situações reais e seus impactos. Não identifique outras pessoas.'));
+openQuestions.forEach((q,i)=>{const wrap=el('div','question');const label=el('label','q-title',`${i+1}. ${q}`);label.htmlFor=`open-${i}`;const area=el('textarea');area.id=`open-${i}`;area.name=`open-${i}`;area.placeholder='Escreva sua avaliação...';area.maxLength=4000;area.setAttribute('aria-label',q);wrap.append(label,area);openPanel.append(wrap)});form.append(openPanel);
+const overallPanel=el('section','section');overallPanel.append(el('h2','','8. Avaliação geral'));overallQuestions.forEach((q,i)=>overallPanel.append(createRating(q.id,`${i+1}.`,q.title,q.choices)));form.append(overallPanel);
+const total=sections.reduce((sum,s)=>sum+s.items.length,0);
+function selected(name){return form.querySelector(`input[name="${name}"]:checked`)?.value||''}
+function updateProgress(){let count=0;sections.forEach((s,si)=>s.items.forEach((_,i)=>{if(selected(`rating-${si}-${i}`))count++}));document.getElementById('progress-label').textContent=`${count} de ${total} questões objetivas respondidas`;document.getElementById('progress-fill').style.width=`${count/total*100}%`}
+function clearInvalid(){form.querySelectorAll('.invalid').forEach(el=>el.classList.remove('invalid'));document.getElementById('status').textContent=''}
+form.addEventListener('change',updateProgress);
+form.addEventListener('input',event=>{event.target.closest('.question')?.classList.remove('invalid')});
+form.addEventListener('change',event=>{event.target.closest('.question')?.classList.remove('invalid')});
+function coletarRespostas(){
+ const notas={};
+ sections.forEach((s,si)=>s.items.forEach((_,i)=>{notas[`${si+1}.${i+1}`]=selected(`rating-${si}-${i}`)}));
+ const abertas=openQuestions.map((_,i)=>document.getElementById(`open-${i}`).value.trim());
+ return {id:respostaId,avaliado:AVALIADO,versao:VERSAO,notas,abertas,avaliacao_geral:selected('overall'),preparado:selected('prepared')};
+}
+async function enviarRespostas(payload){
+ const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),ENVIO_TIMEOUT_MS);
+ let res;
+ try{
+  res=await fetch(`${SB_URL}/rest/v1/${TABELA}`,{method:'POST',signal:ctrl.signal,
+   headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':'application/json',Prefer:'return=minimal'},
+   body:JSON.stringify(payload)});
+ }finally{clearTimeout(timer)}
+ // 409 = esse mesmo envio já tinha sido gravado (a resposta do servidor se perdeu e a pessoa tentou de novo)
+ if(res.ok||res.status===409) return;
+ const err=new Error('HTTP '+res.status);err.status=res.status;err.corpo=await res.text().catch(()=>'');throw err;
+}
+function mensagemDeErro(err){
+ console.error('Falha ao enviar a avaliação:',err,err&&err.corpo);
+ const manter=' Suas respostas continuam preenchidas aqui.';
+ if(err&&err.name==='AbortError') return 'O envio demorou demais. Verifique sua internet e toque em Concluir avaliação de novo.'+manter;
+ if(err&&err.status===401||err&&err.status===403||err&&err.status===404) return `O servidor recusou o envio (erro ${err.status}). Avise a pessoa responsável pela avaliação.`+manter;
+ if(err&&err.status) return `Não foi possível enviar agora (erro ${err.status}). Tente de novo em instantes.`+manter;
+ return 'Sem conexão com o servidor. Verifique sua internet e toque em Concluir avaliação de novo.'+manter;
+}
+document.getElementById('finish').addEventListener('click',async()=>{
+ if(enviando) return;
+ clearInvalid();let firstMissing=null;let missing=0;
+ function check(wrap,answered){if(!answered){wrap.classList.add('invalid');missing++;if(!firstMissing)firstMissing=wrap}}
+ sections.forEach((section,si)=>section.items.forEach((q,i)=>{
+   const name=`rating-${si}-${i}`;check(form.querySelector(`input[name="${name}"]`).closest('.question'),Boolean(selected(name)));
+ }));
+ openQuestions.forEach((q,i)=>{const textarea=document.getElementById(`open-${i}`);check(textarea.closest('.question'),Boolean(textarea.value.trim()))});
+ overallQuestions.forEach(q=>check(form.querySelector(`input[name="${q.id}"]`).closest('.question'),Boolean(selected(q.id))));
+ if(missing){document.getElementById('status').textContent=`Faltam ${missing} pergunta(s) para responder. Preencha os campos destacados antes de finalizar.`;firstMissing.scrollIntoView({behavior:'smooth',block:'center'});firstMissing.querySelector('textarea,input')?.focus({preventScroll:true});return}
+ const botao=document.getElementById('finish');
+ enviando=true;botao.disabled=true;botao.textContent='Enviando…';
+ try{await enviarRespostas(coletarRespostas())}
+ catch(err){
+  enviando=false;botao.disabled=false;botao.textContent='Concluir avaliação';
+  document.getElementById('status').textContent=mensagemDeErro(err);
+  return;
+ }
+ document.querySelector('.intro').hidden=true;
+ form.hidden=true;
+ document.getElementById('finalize').hidden=true;
+ document.getElementById('thanks').hidden=false;
+ document.getElementById('thanks').focus();
+ window.scrollTo({top:0,behavior:'smooth'});
+});
+updateProgress();
+</script>
+</body>
+</html>
