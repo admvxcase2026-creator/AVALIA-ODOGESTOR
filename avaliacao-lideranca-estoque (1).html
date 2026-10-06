@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AVALIAÇÃO DO COORDENADOR | RODRIGO SILVA PEREIRA</title>
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#17243a;background:#f3f6fb;line-height:1.5}
+    *{box-sizing:border-box}body{margin:0}main{max-width:920px;margin:34px auto 72px;padding:0 18px}
+    .hero{background:#102844;color:#fff;border-radius:18px;padding:32px 34px;box-shadow:0 9px 26px #1028441a}
+    .hero h1{margin:0 0 8px;font-size:clamp(1.55rem,4vw,2.1rem);line-height:1.2}.hero p{margin:0;color:#d6e5f6;font-size:1.2rem;font-weight:650}
+    .pill{display:inline-block;background:#244668;color:#e7f4ff;font-weight:700;font-size:.78rem;letter-spacing:.035em;padding:5px 11px;border-radius:99px;margin-bottom:15px}
+    .intro,.section{background:#fff;border:1px solid #e2e8f0;border-radius:16px;margin-top:18px;padding:24px 27px;box-shadow:0 4px 16px #10284408}
+    .intro p{margin:.4em 0}.muted{color:#536378;font-size:.92rem}.scale{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.scale span{background:#f0f5fa;border-radius:7px;padding:7px 11px;font-size:.8rem}
+    .progress{height:9px;border-radius:30px;background:#e5edf6;overflow:hidden;margin:8px 0}.progress div{height:100%;background:#1776bb;width:0;transition:width .15s}
+    h2{font-size:1.25rem;margin:0 0 17px;color:#102844}.question{padding:19px 0;border-top:1px solid #e7edf4}.question:first-of-type{border-top:0;padding-top:4px}
+    .q-title{font-weight:650;margin:0 0 13px}.num{color:#23669e;margin-right:6px}fieldset{padding:0;border:0;margin:0;min-width:0}
+    .rating{display:flex;flex-wrap:wrap;gap:8px}.rating label{cursor:pointer;display:inline-flex;align-items:center;gap:5px;border:1px solid #cfdbe9;border-radius:9px;padding:8px 12px;background:#fff;font-weight:600;color:#33465c;min-height:43px}
+    .rating label:has(input:checked){border-color:#1776bb;background:#e9f4fe;color:#105889}.rating input{accent-color:#1776bb}
+    textarea{width:100%;min-height:105px;border:1px solid #bfcede;border-radius:10px;padding:12px;font:inherit;resize:vertical;background:#fff;color:#17243a}
+    textarea:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8fcdf7;outline-offset:2px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin:23px 0 10px}button{font:inherit;cursor:pointer;border-radius:10px;padding:12px 17px;font-weight:700}
+    .primary{color:white;background:#145e9a;border:1px solid #145e9a}.secondary{background:white;border:1px solid #aebfd0;color:#173b5d}.danger{background:#fff;border:1px solid #d7aeb0;color:#913c42}button:disabled{opacity:.65;cursor:wait}
+    .note{background:#fff7e9;border:1px solid #f1ddb4;padding:13px 16px;border-radius:10px;color:#684915;margin-top:16px;font-size:.91rem}
+    footer{text-align:center;color:#64748b;font-size:.83rem;padding-top:17px}
+    .error{color:#ae2532;font-weight:650;margin-top:8px}.invalid{border-left:4px solid #d6424f;padding-left:13px}.invalid textarea{border-color:#d6424f}
+    #thanks{text-align:center;padding:65px 30px}#thanks h2{font-size:clamp(1.6rem,4vw,2.25rem)}#thanks p{font-size:1.08rem;color:#536378}
+    [hidden]{display:none!important}
+    @media(max-width:540px){main{margin-top:12px;padding:0 10px}.hero{padding:25px 20px}.intro,.section{padding:20px 16px}.rating label{padding:8px 10px}.actions button{width:100%}}
+
+    /* ===== Painel RESPOSTAS (só abre com Ctrl+Shift+A) ===== */
+    main.admin{max-width:1180px}
+    #painel[hidden]{display:none}
+    .painel-grid{display:grid;grid-template-columns:270px minmax(0,1fr);gap:18px;margin-top:18px;align-items:start}
+    .lateral{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:20px 16px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;box-shadow:0 4px 16px #10284408}
+    .lateral h2{font-size:1rem;letter-spacing:.09em;margin:0 0 14px}
+    .lateral-acoes{display:flex;flex-direction:column;gap:8px}
+    .lateral-acoes button,.lateral-rodape button{width:100%;padding:10px 12px;font-size:.88rem}
+    .lateral ul{list-style:none;margin:14px 0;padding:0;display:flex;flex-direction:column;gap:6px}
+    .item-lateral{width:100%;text-align:left;border:1px solid #d9e3ee;background:#fff;border-radius:10px;padding:10px 12px;font-weight:650;color:#26425f;font-size:.92rem}
+    .item-lateral:hover{background:#f5f9fd}.item-lateral[aria-current="true"]{background:#e9f4fe;border-color:#1776bb;color:#105889}
+    .lateral-rodape{display:flex;flex-direction:column;gap:8px;border-top:1px solid #e7edf4;padding-top:14px;margin-top:6px}
+    .conteudo{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:24px 27px;box-shadow:0 4px 16px #10284408;min-width:0}
+    .conteudo-topo{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+    .conteudo-topo h2{margin:0}.meta{color:#536378;font-size:.9rem;margin:0 0 6px}
+    .aviso-versao{background:#fff7e9;border:1px solid #f1ddb4;color:#684915;border-radius:10px;padding:10px 14px;font-size:.88rem;margin:10px 0}
+    .bloco{margin-top:22px}.bloco h3{font-size:1.02rem;margin:0 0 4px;color:#102844;border-left:4px solid #1776bb;padding-left:10px}
+    .linha{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:11px 0;border-top:1px solid #edf2f7}
+    .bloco h3+.linha{border-top:0}.linha .q{flex:1;min-width:0}.linha .num{color:#23669e;margin-right:6px;font-weight:700}
+    .nota-chip{flex:0 0 auto;min-width:118px;text-align:center;border-radius:9px;padding:6px 10px;font-weight:700;font-size:.84rem;background:#eef1f5;color:#44566b}
+    .nota-chip small{display:block;font-weight:600;font-size:.72rem;opacity:.85}
+    .nota-5{background:#dcf2e4;color:#17603d}.nota-4{background:#e8f5de;color:#3c6a1f}.nota-3{background:#fff4d6;color:#7a5a00}.nota-2{background:#ffe6d0;color:#8a4410}.nota-1{background:#fddede;color:#912c34}.nota-na{background:#eef1f5;color:#5b6b7e}
+    .aberta{padding:12px 0;border-top:1px solid #edf2f7}.aberta .q{font-weight:650;margin:0 0 6px}
+    .aberta .r{white-space:pre-wrap;overflow-wrap:anywhere;background:#f7fafd;border:1px solid #e3ebf4;border-radius:10px;padding:11px 13px;margin:0}.aberta .r.vazia{color:#8896a8;font-style:italic}
+    .kpis{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 4px}.kpi{flex:1;min-width:150px;background:#f0f5fa;border-radius:12px;padding:14px 16px}
+    .kpi b{display:block;font-size:1.7rem;color:#102844;line-height:1.2}.kpi span{font-size:.82rem;color:#536378}
+    table.tab{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:8px}.tab th{text-align:left;color:#536378;font-size:.78rem;font-weight:700;padding:6px 8px;border-bottom:2px solid #e2e8f0}
+    .tab td{padding:8px;border-bottom:1px solid #edf2f7;vertical-align:middle}.tab td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.tab td.fx{width:34%}
+    .barra{height:10px;border-radius:20px;background:#e5edf6;overflow:hidden}.barra div{height:100%;background:#1776bb;border-radius:20px}
+    .excluir{margin-top:26px;border-top:1px solid #e7edf4;padding-top:16px}
+    #login-form label{display:block;font-weight:650;margin:12px 0 4px}
+    #login-form input{width:100%;max-width:380px;border:1px solid #bfcede;border-radius:10px;padding:11px 12px;font:inherit}
+    @media(max-width:820px){.painel-grid{grid-template-columns:1fr}.lateral{position:static;max-height:none}.lateral ul{flex-direction:row;flex-wrap:wrap}.item-lateral{width:auto}.conteudo{padding:20px 16px}.linha{flex-direction:column;gap:8px}.nota-chip{align-self:flex-start}}
+    @media print{body{background:#fff}main{margin:0;max-width:100%;padding:0}.hero{background:#fff;color:#111;border:0;box-shadow:none;padding:10px 0}.hero p{color:#555}.pill,.actions,.progress,.progress-label,.note,.print-hide{display:none!important}.intro,.section{box-shadow:none;break-inside:avoid;border:1px solid #ddd;padding:12px;margin:9px 0}.question{break-inside:avoid;padding:10px 0}textarea{min-height:72px}footer{display:none}}
+  </style>
+</head>
+<body>
+<main>
+  <header class="hero"><h1>AVALIAÇÃO DO COORDENADOR</h1><p>RODRIGO SILVA PEREIRA</p></header>
+  <div id="area-form">
+  <section class="intro" aria-label="Instruções">
+    <h2>Orientações de preenchimento</h2>
+    <p>Avalie os comportamentos observados na rotina profissional, com sinceridade, respeito e objetividade. Nas respostas abertas, prefira exemplos concretos e evite identificar colegas.</p>
+    <p class="muted">Você não precisa informar seu nome. Suas respostas são enviadas sem nome e sem qualquer identificação. Todas as perguntas são obrigatórias, inclusive as abertas.</p>
+    <div class="scale"><span><b>1</b> Discordo totalmente</span><span><b>2</b> Discordo parcialmente</span><span><b>3</b> Neutro</span><span><b>4</b> Concordo parcialmente</span><span><b>5</b> Concordo totalmente</span><span><b>N/A</b> Não tenho elementos para avaliar</span></div>
+    <p class="progress-label muted" id="progress-label" role="status" aria-live="polite">0 questões objetivas respondidas</p><div class="progress" aria-hidden="true"><div id="progress-fill"></div></div>
+  </section>
+  <form id="survey" novalidate></form>
+  <section class="section" id="finalize">
+    <h2>Finalizar avaliação</h2>
+    <p>Confira suas respostas. Para concluir, todas as questões devem estar preenchidas.</p>
+    <div class="actions"><button class="primary" id="finish" type="button">Concluir avaliação</button></div>
+    <p id="status" class="error" role="alert" aria-live="assertive"></p>
+  </section>
+  <section class="section" id="thanks" hidden tabindex="-1" aria-live="polite">
+    <h2>Obrigado por responder à avaliação!</h2>
+    <p>Sua participação é importante para o desenvolvimento da liderança e a melhoria do ambiente de trabalho.</p>
+  </section>
+  </div>
+  <section id="painel" hidden aria-label="Respostas recebidas">
+    <div id="painel-login" class="section">
+      <h2>Acesso restrito</h2>
+      <p class="muted">Entre com o seu e-mail e a sua senha (os mesmos do sistema de Envios) para ver as respostas.</p>
+      <form id="login-form" novalidate>
+        <label for="login-email">E-mail</label><input id="login-email" type="email" autocomplete="username">
+        <label for="login-senha">Senha</label><input id="login-senha" type="password" autocomplete="current-password">
+        <div class="actions"><button class="primary" id="login-entrar" type="submit">Entrar</button><button class="secondary" id="login-fechar" type="button">Fechar</button></div>
+        <p id="login-erro" class="error" role="alert" aria-live="assertive"></p>
+      </form>
+    </div>
+    <div id="painel-app" class="painel-grid" hidden>
+      <nav class="lateral" aria-label="Respostas">
+        <h2>RESPOSTAS</h2>
+        <div class="lateral-acoes">
+          <button class="primary" id="btn-pdf-completo" type="button">Relatório completo (PDF)</button>
+          <button class="secondary" id="btn-atualizar" type="button">Atualizar</button>
+        </div>
+        <ul id="lista-respostas"></ul>
+        <div class="lateral-rodape">
+          <button class="secondary" id="btn-fechar-painel" type="button">Fechar painel</button>
+          <button class="danger" id="btn-sair" type="button">Sair</button>
+        </div>
+      </nav>
+      <div class="conteudo">
+        <div class="conteudo-topo"><h2 id="conteudo-titulo"></h2><button class="secondary" id="btn-pdf" type="button">Exportar PDF</button></div>
+        <div id="conteudo-corpo"></div>
+        <p id="painel-status" class="error" role="alert" aria-live="assertive"></p>
+      </div>
+    </div>
+  </section>
+  <footer>Avaliação de Liderança • Uso interno</footer>
+</main>
+<script>
+'use strict';
+// ===== Envio das respostas (Supabase) =====
+const SB_URL='https://llfiwklxinautxoujpre.supabase.co';
+const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxsZml3a2x4aW5hdXR4b3VqcHJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MDUzNTAsImV4cCI6MjEwNDQ4MTM1MH0.3dLtdv0Hvf93jXQHy2mjOTr4BJoCMHF_MzwUVEI5o38';   // chave pública (anon): a tabela só aceita ENVIO, ninguém lê as respostas por aqui
+const TABELA='avaliacao_lideranca';
+const AVALIADO='RODRIGO SILVA PEREIRA';
+const VERSAO='1';                 // se as perguntas mudarem, troque: assim dá pra saber de qual versão é cada resposta
+const ENVIO_TIMEOUT_MS=20000;
+function novoId(){
+  try{
+    if(window.crypto&&crypto.randomUUID) return crypto.randomUUID();
+    const b=new Uint8Array(16);crypto.getRandomValues(b);b[6]=(b[6]&0x0f)|0x40;b[8]=(b[8]&0x3f)|0x80;
+    const h=[...b].map(x=>x.toString(16).padStart(2,'0')).join('');
+    return `${h.slice(0,8)}-${h.slice(8,12)}-${h.slice(12,16)}-${h.slice(16,20)}-${h.slice(20)}`;
+  }catch(e){return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0;return(c==='x'?r:(r&3|8)).toString(16)})}
+}
+// um id por resposta: se o envio demorar e a pessoa tentar de novo, o banco reconhece que é o mesmo e não duplica
+const respostaId=novoId();
+let enviando=false;
+const sections = [
+ {title:'1. Comunicação e clareza',items:[
+ 'O coordenador transmite as orientações de forma clara e objetiva.',
+ 'As prioridades e os prazos das atividades são comunicados com antecedência adequada.',
+ 'O coordenador escuta opiniões, dúvidas e sugestões antes de tomar decisões.',
+ 'As mudanças nos procedimentos são explicadas de forma compreensível.']},
+ {title:'2. Organização e gestão operacional',items:[
+ 'O coordenador distribui as tarefas de maneira equilibrada, considerando a demanda e a capacidade da equipe.',
+ 'Age com rapidez e eficiência diante de imprevistos operacionais.',
+ 'Acompanha a execução das atividades sem gerar cobranças excessivas ou desnecessárias.']},
+ {title:'3. Respeito, ética e imparcialidade',items:[
+ 'Trata os integrantes da equipe com respeito, independentemente de cargo, experiência ou afinidade pessoal.',
+ 'Aplica regras e cobranças de maneira justa e consistente.',
+ 'Reconhece os próprios erros e assume responsabilidade por suas decisões.',
+ 'Lida com divergências e conflitos de forma profissional, sem constranger colaboradores.',
+ 'Mantém uma postura ética e respeitosa mesmo em situações de pressão.']},
+ {title:'4. Desenvolvimento e valorização',items:[
+ 'Oferece orientações e feedbacks que ajudam a melhorar meu desempenho.',
+ 'Reconhece resultados positivos, dedicação e iniciativas da equipe.',
+ 'Demonstra disposição para ensinar e esclarecer dúvidas operacionais.',
+ 'Incentiva a autonomia e a participação dos colaboradores na melhoria dos processos.']},
+ {title:'5. Tomada de decisão e responsabilidade',items:[
+ 'Toma decisões coerentes com as necessidades e prioridades do setor.',
+ 'Demonstra domínio técnico dos processos e procedimentos sob sua responsabilidade.',
+ 'Sabe diferenciar situações que exigem urgência das que podem ser planejadas.',
+ 'Oferece suporte à equipe quando surgem dificuldades ou problemas.',
+ 'Mantém equilíbrio emocional diante de pressão, falhas e cobranças.']},
+ {title:'6. Confiança e ambiente de trabalho',items:[
+ 'Sinto segurança para comunicar erros ou problemas sem receio de tratamento desrespeitoso.',
+ 'Posso apresentar opiniões contrárias às do coordenador sem sofrer represálias.',
+ 'O coordenador demonstra preocupação com as condições de trabalho e a segurança da equipe.',
+ 'Sua atuação contribui para um ambiente de cooperação e confiança.']}
+];
+const openQuestions = [
+ 'Qual é o maior ponto forte do coordenador? Cite uma situação concreta em que isso ficou evidente.',
+ 'Qual comportamento ou atitude do coordenador mais precisa melhorar? Explique como isso afeta seu trabalho.',
+ 'Descreva uma situação em que você se sentiu bem orientado, apoiado ou valorizado pelo coordenador.',
+ 'Descreva uma situação em que a liderança poderia ter agido melhor. O que deveria ter sido feito de maneira diferente?',
+ 'O que o coordenador poderia mudar na organização das tarefas, nos processos do setor ou na comunicação para melhorar os resultados?',
+ 'Se pudesse sugerir uma única mudança imediata na forma de liderança, qual seria e por quê?'
+];
+const overallQuestions=[
+ {id:'overall',title:'Considerando todos os aspectos, qual é sua avaliação geral da liderança do coordenador?',choices:['Excelente','Boa','Regular','Insatisfatória','Muito insatisfatória']},
+ {id:'prepared',title:'Você considera que o coordenador está preparado para exercer sua função?',choices:['Sim, plenamente','Sim, mas precisa desenvolver alguns aspectos','Parcialmente, existem lacunas importantes','Não, precisa de desenvolvimento significativo','Não tenho elementos suficientes para avaliar']}
+];
+const form=document.getElementById('survey');
+function el(tag,className,text){const x=document.createElement(tag);if(className)x.className=className;if(text!==undefined)x.textContent=text;return x}
+function createRating(id,number,question,choices){const wrap=el('div','question');const field=el('fieldset');const legend=el('legend','q-title');const numberEl=el('span','num',number+' ');legend.append(numberEl,document.createTextNode(question));field.append(legend);const rating=el('div','rating');for(const value of choices){const label=el('label');const input=el('input');input.type='radio';input.name=id;input.value=value;label.append(input,document.createTextNode(value));rating.append(label)}field.append(rating);wrap.append(field);return wrap}
+sections.forEach((section,s)=>{const panel=el('section','section');panel.append(el('h2','',section.title));section.items.forEach((q,i)=>panel.append(createRating(`rating-${s}-${i}`,`${s+1}.${i+1}`,q,['1','2','3','4','5','N/A'])));form.append(panel)});
+const openPanel=el('section','section');openPanel.append(el('h2','','7. Avaliação com respostas abertas'));openPanel.append(el('p','muted','Sempre que possível, cite situações reais e seus impactos. Não identifique outras pessoas.'));
+openQuestions.forEach((q,i)=>{const wrap=el('div','question');const label=el('label','q-title',`${i+1}. ${q}`);label.htmlFor=`open-${i}`;const area=el('textarea');area.id=`open-${i}`;area.name=`open-${i}`;area.placeholder='Escreva sua avaliação...';area.maxLength=4000;area.setAttribute('aria-label',q);wrap.append(label,area);openPanel.append(wrap)});form.append(openPanel);
+const overallPanel=el('section','section');overallPanel.append(el('h2','','8. Avaliação geral'));overallQuestions.forEach((q,i)=>overallPanel.append(createRating(q.id,`${i+1}.`,q.title,q.choices)));form.append(overallPanel);
+const total=sections.reduce((sum,s)=>sum+s.items.length,0);
+function selected(name){return form.querySelector(`input[name="${name}"]:checked`)?.value||''}
+function updateProgress(){let count=0;sections.forEach((s,si)=>s.items.forEach((_,i)=>{if(selected(`rating-${si}-${i}`))count++}));document.getElementById('progress-label').textContent=`${count} de ${total} questões objetivas respondidas`;document.getElementById('progress-fill').style.width=`${count/total*100}%`}
+function clearInvalid(){form.querySelectorAll('.invalid').forEach(el=>el.classList.remove('invalid'));document.getElementById('status').textContent=''}
+form.addEventListener('change',updateProgress);
+form.addEventListener('input',event=>{event.target.closest('.question')?.classList.remove('invalid')});
+form.addEventListener('change',event=>{event.target.closest('.question')?.classList.remove('invalid')});
+function coletarRespostas(){
+ const notas={};
+ sections.forEach((s,si)=>s.items.forEach((_,i)=>{notas[`${si+1}.${i+1}`]=selected(`rating-${si}-${i}`)}));
+ const abertas=openQuestions.map((_,i)=>document.getElementById(`open-${i}`).value.trim());
+ return {id:respostaId,avaliado:AVALIADO,versao:VERSAO,notas,abertas,avaliacao_geral:selected('overall'),preparado:selected('prepared')};
+}
+async function enviarRespostas(payload){
+ const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),ENVIO_TIMEOUT_MS);
+ let res;
+ try{
+  res=await fetch(`${SB_URL}/rest/v1/${TABELA}`,{method:'POST',signal:ctrl.signal,
+   headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':'application/json',Prefer:'return=minimal'},
+   body:JSON.stringify(payload)});
+ }finally{clearTimeout(timer)}
+ // 409 = esse mesmo envio já tinha sido gravado (a resposta do servidor se perdeu e a pessoa tentou de novo)
+ if(res.ok||res.status===409) return;
+ const err=new Error('HTTP '+res.status);err.status=res.status;err.corpo=await res.text().catch(()=>'');throw err;
+}
+function mensagemDeErro(err){
+ console.error('Falha ao enviar a avaliação:',err,err&&err.corpo);
+ const manter=' Suas respostas continuam preenchidas aqui.';
+ if(err&&err.name==='AbortError') return 'O envio demorou demais. Verifique sua internet e toque em Concluir avaliação de novo.'+manter;
+ if(err&&err.status===401||err&&err.status===403||err&&err.status===404) return `O servidor recusou o envio (erro ${err.status}). Avise a pessoa responsável pela avaliação.`+manter;
+ if(err&&err.status) return `Não foi possível enviar agora (erro ${err.status}). Tente de novo em instantes.`+manter;
+ return 'Sem conexão com o servidor. Verifique sua internet e toque em Concluir avaliação de novo.'+manter;
+}
+document.getElementById('finish').addEventListener('click',async()=>{
+ if(enviando) return;
+ clearInvalid();let firstMissing=null;let missing=0;
+ function check(wrap,answered){if(!answered){wrap.classList.add('invalid');missing++;if(!firstMissing)firstMissing=wrap}}
+ sections.forEach((section,si)=>section.items.forEach((q,i)=>{
+   const name=`rating-${si}-${i}`;check(form.querySelector(`input[name="${name}"]`).closest('.question'),Boolean(selected(name)));
+ }));
+ openQuestions.forEach((q,i)=>{const textarea=document.getElementById(`open-${i}`);check(textarea.closest('.question'),Boolean(textarea.value.trim()))});
+ overallQuestions.forEach(q=>check(form.querySelector(`input[name="${q.id}"]`).closest('.question'),Boolean(selected(q.id))));
+ if(missing){document.getElementById('status').textContent=`Faltam ${missing} pergunta(s) para responder. Preencha os campos destacados antes de finalizar.`;firstMissing.scrollIntoView({behavior:'smooth',block:'center'});firstMissing.querySelector('textarea,input')?.focus({preventScroll:true});return}
+ const botao=document.getElementById('finish');
+ enviando=true;botao.disabled=true;botao.textContent='Enviando…';
+ try{await enviarRespostas(coletarRespostas())}
+ catch(err){
+  enviando=false;botao.disabled=false;botao.textContent='Concluir avaliação';
+  document.getElementById('status').textContent=mensagemDeErro(err);
+  return;
+ }
+ document.querySelector('.intro').hidden=true;
+ form.hidden=true;
+ document.getElementById('finalize').hidden=true;
+ document.getElementById('thanks').hidden=false;
+ document.getElementById('thanks').focus();
+ window.scrollTo({top:0,behavior:'smooth'});
+});
+updateProgress();
+
+/* ===== Painel RESPOSTAS (abre com Ctrl+Shift+A) =====
+   O atalho só abre a tela. Quem consegue LER as respostas é decidido pelo banco: só as contas
+   cadastradas em avaliacao_admins. O texto vindo das respostas é sempre inserido como texto puro
+   (textContent), nunca como HTML, pra ninguém conseguir plantar script na tela de quem lê. */
+const PDF_LIB_URL='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+const PDF_TABLE_URL='https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js';
+const ESCALA={'1':'Discordo totalmente','2':'Discordo parcialmente','3':'Neutro','4':'Concordo parcialmente','5':'Concordo totalmente','N/A':'Não tenho elementos para avaliar'};
+const byId=id=>document.getElementById(id);
+let sessao=null,respostas=[],vistaAtual='resumo';   // a sessão fica só na memória: fechar a aba = sair
+
+function fmtDataBR(iso){return iso?String(iso).split('-').reverse().join('/'):''}
+function fmtMedia(x){return x==null?'-':x.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function mediaDe(vals){const n=vals.filter(v=>v!=='N/A'&&v!=null).map(Number).filter(v=>!Number.isNaN(v));return n.length?n.reduce((a,b)=>a+b,0)/n.length:null}
+function notaClasse(n){return n==='N/A'?'nota-na':`nota-${n}`}
+function corNota(m){return m==null?'#b6c2d1':m>=4.5?'#2f9e6b':m>=3.5?'#6fb86a':m>=2.5?'#e0b030':m>=1.5?'#e48a3a':'#d6424f'}
+function setStatusPainel(t){byId('painel-status').textContent=t||''}
+
+/* ---------- conta e dados ---------- */
+async function autenticar(email,senha){
+ let r;
+ try{r=await fetch(`${SB_URL}/auth/v1/token?grant_type=password`,{method:'POST',headers:{apikey:SB_KEY,'Content-Type':'application/json'},body:JSON.stringify({email,password:senha})})}
+ catch(e){throw new Error('Sem conexão com o servidor. Verifique a internet.')}
+ if(r.status===429) throw new Error('Muitas tentativas seguidas. Aguarde um pouco e tente de novo.');
+ if(!r.ok) throw new Error('E-mail ou senha incorretos.');
+ const token=(await r.json()).access_token;
+ let p;
+ try{p=await fetch(`${SB_URL}/rest/v1/rpc/avaliacao_eh_admin`,{method:'POST',headers:{apikey:SB_KEY,Authorization:'Bearer '+token,'Content-Type':'application/json'},body:'{}'})}
+ catch(e){throw new Error('Sem conexão com o servidor. Verifique a internet.')}
+ if(p.status===404) throw new Error('O banco ainda não foi preparado: rode o avaliacao_lideranca.sql no Supabase.');
+ if(!p.ok||(await p.json())!==true) throw new Error('Esta conta não tem permissão para ver as respostas.');
+ sessao={token,email};
+}
+async function carregarRespostas(){
+ const url=`${SB_URL}/rest/v1/${TABELA}?select=id,ordem,versao,respondido_em,notas,abertas,avaliacao_geral,preparado&avaliado=eq.${encodeURIComponent(AVALIADO)}&order=ordem.asc`;
+ const r=await fetch(url,{headers:{apikey:SB_KEY,Authorization:'Bearer '+sessao.token}});
+ if(r.status===401||r.status===403){sessao=null;const e=new Error('Sua sessão expirou. Entre de novo.');e.sessao=true;throw e}
+ if(!r.ok) throw new Error(`Não foi possível carregar as respostas (erro ${r.status}).`);
+ respostas=await r.json();
+}
+
+/* ---------- abrir / fechar ---------- */
+function mostrarLogin(msg){byId('painel-login').hidden=false;byId('painel-app').hidden=true;byId('login-erro').textContent=msg||'';setTimeout(()=>byId('login-email').focus(),0)}
+async function mostrarApp(){byId('painel-login').hidden=true;byId('painel-app').hidden=false;await atualizarPainel()}
+async function atualizarPainel(){
+ setStatusPainel('');
+ try{await carregarRespostas()}
+ catch(e){if(e.sessao){mostrarLogin(e.message);return}setStatusPainel(e.message||'Falha ao carregar.');return}
+ if(vistaAtual!=='resumo'&&!respostas.some(r=>r.id===vistaAtual)) vistaAtual='resumo';
+ desenharLateral();desenharVista();
+}
+function abrirPainel(){byId('area-form').hidden=true;byId('painel').hidden=false;document.querySelector('main').classList.add('admin');if(sessao) mostrarApp();else mostrarLogin()}
+function fecharPainel(){byId('painel').hidden=true;byId('area-form').hidden=false;document.querySelector('main').classList.remove('admin')}
+function sairDoPainel(){sessao=null;respostas=[];vistaAtual='resumo';byId('lista-respostas').replaceChildren();byId('conteudo-corpo').replaceChildren();byId('login-senha').value='';fecharPainel()}
+document.addEventListener('keydown',ev=>{
+ if((ev.ctrlKey||ev.metaKey)&&ev.shiftKey&&!ev.altKey&&(ev.code==='KeyA'||String(ev.key).toLowerCase()==='a')){
+  ev.preventDefault();
+  if(byId('painel').hidden) abrirPainel();else fecharPainel();
+ }
+});
+// plano B se o navegador reservar o atalho: abrir o link com ?respostas no final
+if(/(^|[?&#])respostas(?![a-z])/i.test(location.search+location.hash)) abrirPainel();
+byId('login-form').addEventListener('submit',async ev=>{
+ ev.preventDefault();
+ const email=byId('login-email').value.trim(),senha=byId('login-senha').value,btn=byId('login-entrar');
+ if(!email||!senha){byId('login-erro').textContent='Preencha e-mail e senha.';return}
+ btn.disabled=true;btn.textContent='Entrando…';byId('login-erro').textContent='';
+ try{await autenticar(email,senha);byId('login-senha').value='';await mostrarApp()}
+ catch(e){byId('login-erro').textContent=e.message||'Não foi possível entrar.'}
+ finally{btn.disabled=false;btn.textContent='Entrar'}
+});
+byId('login-fechar').addEventListener('click',fecharPainel);
+byId('btn-fechar-painel').addEventListener('click',fecharPainel);
+byId('btn-sair').addEventListener('click',sairDoPainel);
+byId('btn-atualizar').addEventListener('click',atualizarPainel);
+byId('btn-pdf').addEventListener('click',()=>exportarPdf('atual'));
+byId('btn-pdf-completo').addEventListener('click',()=>exportarPdf('completo'));
+
+/* ---------- cálculo do resumo ---------- */
+function calcularResumo(rows){
+ const notasDe=chaves=>rows.flatMap(r=>chaves.map(c=>r.notas&&r.notas[c]).filter(v=>v!==undefined&&v!==null));
+ const perguntas=[];
+ sections.forEach((s,si)=>s.items.forEach((q,i)=>{
+  const chave=`${si+1}.${i+1}`,v=notasDe([chave]);
+  perguntas.push({chave,texto:q,bloco:si,media:mediaDe(v),notas:v.filter(x=>x!=='N/A').length,na:v.filter(x=>x==='N/A').length});
+ }));
+ const blocos=sections.map((s,si)=>({titulo:s.title,media:mediaDe(notasDe(perguntas.filter(p=>p.bloco===si).map(p=>p.chave)))}));
+ const dist=(campo,ops)=>ops.map(o=>({opcao:o,n:rows.filter(r=>r[campo]===o).length}));
+ return {total:rows.length,mediaGeral:mediaDe(notasDe(perguntas.map(p=>p.chave))),blocos,perguntas,geral:dist('avaliacao_geral',overallQuestions[0].choices),preparado:dist('preparado',overallQuestions[1].choices)};
+}
+
+/* ---------- telas ---------- */
+function barra(valor,max,cor){const w=el('div','barra'),f=el('div');f.style.width=`${Math.max(0,Math.min(100,valor/max*100))}%`;if(cor) f.style.background=cor;w.append(f);return w}
+function tabela(cabs,linhas,numCols=[]){
+ const t=el('table','tab'),th=el('thead'),tr=el('tr');
+ cabs.forEach(c=>tr.append(el('th','',c)));th.append(tr);t.append(th);
+ const tb=el('tbody');
+ linhas.forEach(l=>{const r=el('tr');l.forEach((c,i)=>{const td=el('td',numCols.includes(i)?'n':(c instanceof Node?'fx':''));if(c instanceof Node) td.append(c);else td.textContent=c;r.append(td)});tb.append(r)});
+ t.append(tb);return t;
+}
+function blocoComTitulo(titulo,...filhos){const b=el('div','bloco');b.append(el('h3','',titulo),...filhos);return b}
+function desenharLateral(){
+ const ul=byId('lista-respostas');ul.replaceChildren();
+ const add=(chave,texto)=>{const li=el('li'),b=el('button','item-lateral',texto);b.type='button';b.dataset.vista=chave;b.setAttribute('aria-current',String(vistaAtual===chave));b.addEventListener('click',()=>{vistaAtual=chave;desenharLateral();desenharVista()});li.append(b);ul.append(li)};
+ add('resumo','Resumo geral');
+ respostas.forEach((r,i)=>add(r.id,`Resposta usuário ${i+1}`));
+}
+function desenharVista(){
+ const corpo=byId('conteudo-corpo'),titulo=byId('conteudo-titulo');corpo.replaceChildren();
+ if(vistaAtual==='resumo'){titulo.textContent='Resumo geral';corpo.append(...vistaResumo())}
+ else{const i=respostas.findIndex(r=>r.id===vistaAtual);titulo.textContent=`Resposta usuário ${i+1}`;corpo.append(...vistaResposta(respostas[i],i))}
+ byId('btn-pdf').disabled=!respostas.length;byId('btn-pdf-completo').disabled=!respostas.length;
+}
+function vistaResumo(){
+ if(!respostas.length) return [el('p','meta','Ainda não há respostas.')];
+ const R=calcularResumo(respostas),out=[],k=el('div','kpis');
+ [[String(R.total),'Respostas recebidas'],[R.mediaGeral==null?'-':fmtMedia(R.mediaGeral)+' de 5','Média geral das notas']].forEach(([v,l])=>{const d=el('div','kpi');d.append(el('b','',v),el('span','',l));k.append(d)});
+ out.push(k);
+ out.push(blocoComTitulo('Média por bloco',tabela(['Bloco','Média',''],R.blocos.map(b=>[b.titulo,fmtMedia(b.media),barra(b.media||0,5,corNota(b.media))]),[1])));
+ out.push(blocoComTitulo('Média por pergunta',tabela(['Nº','Pergunta','Média','Notas','N/A'],R.perguntas.map(p=>[p.chave,p.texto,fmtMedia(p.media),String(p.notas),String(p.na)]),[2,3,4])));
+ const distTab=d=>tabela(['Resposta','Pessoas',''],d.map(x=>[x.opcao,String(x.n),barra(x.n,Math.max(1,R.total),'#1776bb')]),[1]);
+ out.push(blocoComTitulo('Avaliação geral da liderança',distTab(R.geral)));
+ out.push(blocoComTitulo('O coordenador está preparado para a função?',distTab(R.preparado)));
+ return out;
+}
+function vistaResposta(r,i){
+ const out=[];
+ out.push(el('p','meta',`Enviada em ${fmtDataBR(r.respondido_em)} · Média das notas: ${fmtMedia(mediaDe(Object.values(r.notas||{})))}`));
+ if(r.versao!==VERSAO) out.push(el('div','aviso-versao',`Esta resposta é da versão "${r.versao}" do questionário e a página está na versão "${VERSAO}". Se as perguntas mudaram, os textos abaixo podem não corresponder ao que a pessoa viu.`));
+ sections.forEach((s,si)=>{
+  const b=el('div','bloco');b.append(el('h3','',s.title));
+  s.items.forEach((q,qi)=>{
+   const chave=`${si+1}.${qi+1}`,n=r.notas&&r.notas[chave],l=el('div','linha'),qd=el('div','q');
+   qd.append(el('span','num',chave+' '),document.createTextNode(q));
+   const chip=el('div',`nota-chip ${n?notaClasse(n):'nota-na'}`);chip.append(document.createTextNode(n||'-'));
+   if(n) chip.append(el('small','',ESCALA[n]));
+   l.append(qd,chip);b.append(l);
+  });
+  out.push(b);
+ });
+ const ab=el('div','bloco');ab.append(el('h3','','7. Avaliação com respostas abertas'));
+ openQuestions.forEach((q,qi)=>{
+  const resp=String((r.abertas&&r.abertas[qi])||''),d=el('div','aberta');
+  d.append(el('p','q',`${qi+1}. ${q}`),el('p',resp.trim()?'r':'r vazia',resp.trim()?resp:'(sem resposta)'));ab.append(d);
+ });
+ out.push(ab);
+ const g=el('div','bloco');g.append(el('h3','','8. Avaliação geral'));
+ [[overallQuestions[0].title,r.avaliacao_geral],[overallQuestions[1].title,r.preparado]].forEach(([q,a])=>{const d=el('div','aberta');d.append(el('p','q',q),el('p','r',a||'-'));g.append(d)});
+ out.push(g);
+ const ex=el('div','excluir'),btn=el('button','danger','Excluir esta resposta');btn.type='button';btn.addEventListener('click',()=>excluirResposta(r,i));ex.append(btn);out.push(ex);
+ return out;
+}
+async function excluirResposta(r,i){
+ if(!confirm(`Excluir a Resposta usuário ${i+1}? Isso não pode ser desfeito.`)) return;
+ setStatusPainel('');
+ try{
+  const res=await fetch(`${SB_URL}/rest/v1/${TABELA}?id=eq.${encodeURIComponent(r.id)}`,{method:'DELETE',headers:{apikey:SB_KEY,Authorization:'Bearer '+sessao.token,Prefer:'return=representation'}});
+  if(res.status===401||res.status===403){sessao=null;mostrarLogin('Sua sessão expirou. Entre de novo.');return}
+  const apagadas=res.ok?await res.json():[];
+  if(!res.ok||!apagadas.length) throw new Error('Não foi possível excluir esta resposta.');
+ }catch(e){setStatusPainel(e.message||'Não foi possível excluir.');return}
+ vistaAtual='resumo';await atualizarPainel();
+}
+
+/* ---------- PDF ---------- */
+function carregarScript(src){return new Promise((ok,err)=>{const s=document.createElement('script');s.src=src;s.onload=ok;s.onerror=()=>err(new Error('Não consegui carregar a biblioteca de PDF. Verifique a internet.'));document.head.appendChild(s)})}
+async function garantirPdf(){
+ const pronto=()=>window.jspdf&&window.jspdf.jsPDF&&typeof new window.jspdf.jsPDF().autoTable==='function';
+ if(pronto()) return;
+ if(!(window.jspdf&&window.jspdf.jsPDF)) await carregarScript(PDF_LIB_URL);
+ if(!pronto()) await carregarScript(PDF_TABLE_URL);
+ if(!pronto()) throw new Error('A biblioteca de PDF não carregou.');
+}
+const PDFC={M:14,W:210,H:297,azul:[16,40,68],azul2:[23,118,187],cinza:[83,99,120],fundo:[240,245,250],linha:[226,232,240]};
+// a fonte padrão do PDF só tem letras latinas: aspas/travessões "bonitos" viram simples e emoji/símbolos são removidos
+function limparPdf(s){
+ return String(s==null?'':s).replace(/\r\n?/g,'\n')
+  .replace(/[\u2018\u2019\u201A]/g,"'").replace(/[\u201C\u201D\u201E]/g,'"')
+  .replace(/[\u2013\u2014\u2212]/g,'-').replace(/\u2026/g,'...').replace(/\u00A0/g,' ').replace(/\u2192/g,'->')
+  .replace(/[\u200B-\u200F\u2060\uFE0E\uFE0F]/g,'')
+  .replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}]/gu,'')
+  .replace(/[^\n\x20-\x7E\u00A1-\u00FF\u2022\u20AC]/g,'?');
+}
+function estiloNota(n){
+ return ({'5':{f:[220,242,228],t:[23,96,61]},'4':{f:[232,245,222],t:[60,106,31]},'3':{f:[255,244,214],t:[122,90,0]},'2':{f:[255,230,208],t:[138,68,16]},'1':{f:[253,222,222],t:[145,44,52]}})[n]||{f:[238,241,245],t:[91,107,126]};
+}
+function rgbMedia(m){return m==null?[182,194,209]:m>=4.5?[47,158,107]:m>=3.5?[111,184,106]:m>=2.5?[224,176,48]:m>=1.5?[228,138,58]:[214,66,79]}
+function estiloTab(extra){
+ return Object.assign({theme:'grid',margin:{left:PDFC.M,right:PDFC.M,bottom:20},
+  styles:{font:'helvetica',fontSize:8.8,cellPadding:2.4,lineColor:PDFC.linha,lineWidth:.2,textColor:[30,41,59],valign:'middle'},
+  headStyles:{fillColor:PDFC.azul,textColor:255,fontStyle:'bold',halign:'left'},alternateRowStyles:{fillColor:[250,252,254]}},extra);
+}
+function cabecalhoPdf(doc,subtitulo){
+ doc.setFillColor(...PDFC.azul);doc.rect(0,0,PDFC.W,36,'F');
+ doc.setFillColor(...PDFC.azul2);doc.rect(0,36,PDFC.W,1.6,'F');
+ doc.setTextColor(255,255,255);doc.setFont('helvetica','bold');doc.setFontSize(18);doc.text('AVALIAÇÃO DO COORDENADOR',PDFC.M,15);
+ doc.setFont('helvetica','normal');doc.setFontSize(13);doc.setTextColor(214,229,246);doc.text(limparPdf(AVALIADO),PDFC.M,23.5);
+ doc.setFontSize(9.5);doc.text(limparPdf(subtitulo),PDFC.M,30.5);
+ const d=new Date();doc.text('Gerado em '+d.toLocaleDateString('pt-BR')+' às '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}),PDFC.W-PDFC.M,30.5,{align:'right'});
+ return 48;
+}
+function rodapePdf(doc){
+ const n=doc.getNumberOfPages();
+ for(let i=1;i<=n;i++){
+  doc.setPage(i);doc.setDrawColor(...PDFC.linha);doc.setLineWidth(.3);doc.line(PDFC.M,PDFC.H-14,PDFC.W-PDFC.M,PDFC.H-14);
+  doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(120,132,148);
+  doc.text('Avaliação de Liderança • Uso interno',PDFC.M,PDFC.H-9);doc.text(`Página ${i} de ${n}`,PDFC.W-PDFC.M,PDFC.H-9,{align:'right'});
+ }
+}
+function garantirEspaco(doc,y,h){if(y+h>PDFC.H-20){doc.addPage();return 20}return y}
+function tituloPdf(doc,y,texto){
+ y=garantirEspaco(doc,y+3,36);   // respiro em cima + reserva espaço pro título e o começo da tabela (título nunca fica sozinho no pé da página)
+ doc.setFillColor(...PDFC.azul2);doc.rect(PDFC.M,y-4.4,1.6,6.2,'F');
+ doc.setFont('helvetica','bold');doc.setFontSize(12);doc.setTextColor(...PDFC.azul);doc.text(limparPdf(texto),PDFC.M+4,y);
+ return y+3.5;
+}
+function kpisPdf(doc,y,itens){
+ const gap=4,w=(PDFC.W-2*PDFC.M-gap*(itens.length-1))/itens.length;
+ itens.forEach((it,i)=>{
+  const x=PDFC.M+i*(w+gap);
+  doc.setFillColor(...PDFC.fundo);doc.setDrawColor(...PDFC.linha);doc.setLineWidth(.3);doc.roundedRect(x,y,w,20,2.5,2.5,'FD');
+  doc.setFont('helvetica','bold');doc.setFontSize(17);doc.setTextColor(...PDFC.azul);doc.text(limparPdf(it[1]),x+5,y+10.5);
+  doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(...PDFC.cinza);doc.text(limparPdf(it[0]),x+5,y+16.5);
+ });
+ return y+27;
+}
+function tabelaBarrasPdf(doc,y,cabs,linhas,valores,max,cores){
+ doc.autoTable(estiloTab({startY:y,head:[cabs],body:linhas,
+  columnStyles:{1:{halign:'right',cellWidth:24},2:{cellWidth:60}},
+  didDrawCell:d=>{
+   if(d.section==='body'&&d.column.index===2){
+    const v=valores[d.row.index],x=d.cell.x+2,w=d.cell.width-4,yy=d.cell.y+d.cell.height/2-1.5;
+    doc.setFillColor(229,237,246);doc.roundedRect(x,yy,w,3,1.2,1.2,'F');
+    if(v>0){doc.setFillColor(...cores(v));doc.roundedRect(x,yy,Math.max(1.8,w*Math.min(1,v/max)),3,1.2,1.2,'F')}
+   }
+  }}));
+ return doc.lastAutoTable.finalY+8;
+}
+function escreverResumo(doc,rows,y){
+ const R=calcularResumo(rows);
+ y=tituloPdf(doc,y,'Resumo geral');
+ y=kpisPdf(doc,y+3,[['Respostas recebidas',String(R.total)],['Média geral das notas',R.mediaGeral==null?'-':fmtMedia(R.mediaGeral)+' de 5']]);
+ y=tituloPdf(doc,y,'Média por bloco');
+ y=tabelaBarrasPdf(doc,y+3,['Bloco','Média',''],R.blocos.map(b=>[limparPdf(b.titulo),fmtMedia(b.media),'']),R.blocos.map(b=>b.media||0),5,rgbMedia);
+ y=tituloPdf(doc,y,'Média por pergunta');
+ doc.autoTable(estiloTab({startY:y+3,head:[['Nº','Pergunta','Média','Notas','N/A']],
+  body:R.perguntas.map(p=>[p.chave,limparPdf(p.texto),fmtMedia(p.media),String(p.notas),String(p.na)]),
+  columnStyles:{0:{cellWidth:12,halign:'center'},2:{cellWidth:16,halign:'right',fontStyle:'bold'},3:{cellWidth:14,halign:'right'},4:{cellWidth:14,halign:'right'}},
+  rowPageBreak:'avoid',
+  didParseCell:d=>{if(d.section==='body'&&d.column.index===2){const m=R.perguntas[d.row.index].media;d.cell.styles.textColor=m==null?[120,132,148]:rgbMedia(m).map(c=>Math.round(c*0.72))}}}));
+ y=doc.lastAutoTable.finalY+8;
+ const dist=(titulo,d)=>{
+  y=tituloPdf(doc,garantirEspaco(doc,y,50),titulo);
+  y=tabelaBarrasPdf(doc,y+3,['Resposta','Pessoas',''],d.map(x=>[limparPdf(x.opcao),String(x.n),'']),d.map(x=>x.n),Math.max(1,R.total),()=>PDFC.azul2);
+ };
+ dist('Avaliação geral da liderança',R.geral);
+ dist('O coordenador está preparado para a função?',R.preparado);
+ return y;
+}
+function escreverResposta(doc,r,idx,y,comFaixa){
+ const mediaR=mediaDe(Object.values(r.notas||{}));
+ if(comFaixa){
+  doc.setFillColor(...PDFC.fundo);doc.setDrawColor(...PDFC.linha);doc.setLineWidth(.3);doc.roundedRect(PDFC.M,y,PDFC.W-2*PDFC.M,16,2.5,2.5,'FD');
+  doc.setFillColor(...PDFC.azul2);doc.rect(PDFC.M,y,2.2,16,'F');
+  doc.setFont('helvetica','bold');doc.setFontSize(14);doc.setTextColor(...PDFC.azul);doc.text(`Resposta usuário ${idx+1}`,PDFC.M+7,y+10);
+  doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(...PDFC.cinza);
+  doc.text(`Enviada em ${fmtDataBR(r.respondido_em)}   •   Média das notas: ${fmtMedia(mediaR)}`,PDFC.W-PDFC.M-4,y+10,{align:'right'});
+  y+=22;
+ }else{
+  doc.setFont('helvetica','normal');doc.setFontSize(9.5);doc.setTextColor(...PDFC.cinza);
+  doc.text(`Enviada em ${fmtDataBR(r.respondido_em)}   •   Média das notas: ${fmtMedia(mediaR)}`,PDFC.M,y);y+=7;
+ }
+ if(r.versao!==VERSAO){doc.setFontSize(8.5);doc.setTextColor(138,68,16);doc.text(limparPdf(`Atenção: resposta da versão "${r.versao}" do questionário (a atual é "${VERSAO}").`),PDFC.M,y);y+=6}
+ sections.forEach((s,si)=>{
+  const corpo=s.items.map((q,i)=>{const n=r.notas&&r.notas[`${si+1}.${i+1}`];return [`${si+1}.${i+1}`,limparPdf(q),n?`${n} - ${ESCALA[n]}`:'-',n]});
+  y=garantirEspaco(doc,y,34);   // o título do bloco nunca fica sozinho no fim da página
+  doc.autoTable(estiloTab({startY:y,head:[[{content:limparPdf(s.title),colSpan:3}]],body:corpo.map(c=>c.slice(0,3)),
+   columnStyles:{0:{cellWidth:12,halign:'center'},2:{cellWidth:46,halign:'center'}},rowPageBreak:'avoid',
+   didParseCell:d=>{if(d.section==='body'&&d.column.index===2){const e=estiloNota(corpo[d.row.index][3]);d.cell.styles.fillColor=e.f;d.cell.styles.textColor=e.t;d.cell.styles.fontStyle='bold'}}}));
+  y=doc.lastAutoTable.finalY+6;
+ });
+ y=tituloPdf(doc,garantirEspaco(doc,y,30),'7. Avaliação com respostas abertas');y+=3;
+ openQuestions.forEach((q,qi)=>{
+  const resp=String((r.abertas&&r.abertas[qi])||'').trim();
+  // resposta curta fica inteira numa página; resposta longa pode continuar na seguinte (a pergunta se repete no topo)
+  const longa=resp.length>1100||resp.split('\n').length>14;
+  doc.autoTable(estiloTab({startY:y,pageBreak:longa?'auto':'avoid',head:[[limparPdf(`${qi+1}. ${q}`)]],body:[[resp?limparPdf(resp):'(sem resposta)']],
+   headStyles:{fillColor:PDFC.fundo,textColor:PDFC.azul,fontStyle:'bold',lineColor:PDFC.linha},
+   styles:{font:'helvetica',fontSize:9,cellPadding:3,lineColor:PDFC.linha,lineWidth:.2,textColor:resp?[30,41,59]:[140,150,165],fontStyle:resp?'normal':'italic',valign:'top'},alternateRowStyles:{fillColor:[255,255,255]}}));
+  y=doc.lastAutoTable.finalY+5;
+ });
+ y=tituloPdf(doc,garantirEspaco(doc,y,40),'8. Avaliação geral');y+=3;
+ doc.autoTable(estiloTab({startY:y,pageBreak:'avoid',head:[['Pergunta','Resposta']],
+  body:[[limparPdf(overallQuestions[0].title),limparPdf(r.avaliacao_geral||'-')],[limparPdf(overallQuestions[1].title),limparPdf(r.preparado||'-')]],
+  columnStyles:{1:{cellWidth:56,fontStyle:'bold'}}}));
+ return doc.lastAutoTable.finalY+6;
+}
+function baixarPdf(doc,nome){doc.save(nome)}
+async function exportarPdf(modo){
+ if(!respostas.length) return;
+ setStatusPainel('');
+ const b1=byId('btn-pdf'),b2=byId('btn-pdf-completo'),t1=b1.textContent,t2=b2.textContent;
+ b1.disabled=true;b2.disabled=true;(modo==='completo'?b2:b1).textContent='Gerando PDF…';
+ try{
+  await garantirPdf();
+  const doc=new window.jspdf.jsPDF({unit:'mm',format:'a4'});let nome;
+  if(modo==='completo'){
+   let y=cabecalhoPdf(doc,`Relatório completo · ${respostas.length} resposta(s)`);escreverResumo(doc,respostas,y);
+   respostas.forEach((r,i)=>{doc.addPage();escreverResposta(doc,r,i,18,true)});nome='Avaliacao-Coordenador-Relatorio-completo.pdf';
+  }else if(vistaAtual==='resumo'){
+   escreverResumo(doc,respostas,cabecalhoPdf(doc,`Resumo geral · ${respostas.length} resposta(s)`));nome='Avaliacao-Coordenador-Resumo.pdf';
+  }else{
+   const i=respostas.findIndex(r=>r.id===vistaAtual);
+   escreverResposta(doc,respostas[i],i,cabecalhoPdf(doc,`Resposta usuário ${i+1}`),false);nome=`Avaliacao-Coordenador-Resposta-usuario-${i+1}.pdf`;
+  }
+  rodapePdf(doc);baixarPdf(doc,nome);
+ }catch(e){console.error(e);setStatusPainel('Não consegui gerar o PDF: '+(e.message||e))}
+ finally{b1.textContent=t1;b2.textContent=t2;b1.disabled=!respostas.length;b2.disabled=!respostas.length}
+}
+</script>
+</body>
+</html>
